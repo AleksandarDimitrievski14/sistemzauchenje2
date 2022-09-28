@@ -1,8 +1,9 @@
-from django.shortcuts import  render, redirect
+from django.shortcuts import render, redirect
 from .forms import NewUserForm
 from django.contrib.auth import login, authenticate, logout
 from django.contrib import messages
 from django.contrib.auth.forms import AuthenticationForm
+
 
 def index(request):
     return render(request, 'index.html')
@@ -35,6 +36,18 @@ def exercise(request):
 
 def testing(request):
     return render(request, 'testing.html')
+
+
+def grammar(request):
+    return render(request, 'grammar.html')
+
+
+def words(request):
+    return render(request, 'words.html')
+
+
+def texts(request):
+    return render(request, 'texts.html')
 
 
 def login_request(request):

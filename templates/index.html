@@ -36,24 +36,24 @@
                <li class="nav-item">
                    <a href="contact.html" class="nav-link">Contact</a>
                </li>
-
-
-      {% if user.is_authenticated %}
-
-      <li class="nav-item">
-        <a class="nav-link" href="/logout.html">Logout</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Welcome, {{user.username}}</a>
-      </li>
-
-      {% else %}
-
-      <li class="nav-item">
-        <a class="nav-link" href="/login.html">Login</a>
-      </li>
-
-      {% endif %}
+              {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Welcome, {{ user.username }}</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/logout.html">Logout</a>
+                </li>
+            {% else %}
+                   <li class="nav-item">
+                    <a class="nav-link" href="index.html">Welcome, Guest</a>
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="/login.html">Login</a>
+                 </li>
+                <li class="nav-item">
+                <a style="font-style: italic" href="signin.html" class="nav-link">Register</a>
+            </li>
+            {% endif %}
            </ul>
        </div>
     </div>

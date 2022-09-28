@@ -33,6 +33,9 @@ urlpatterns = [
     path("signin.html", views.register_request, name="signin"),
     path("login.html", views.login_request, name="login"),
     path("logout.html", views.logout_request, name="logout"),
+    path("texts.html", views.texts, name="texts"),
+    path("grammar.html", views.grammar, name="grammar"),
+    path("words.html", views.words, name="words"),
 
 ]
 
